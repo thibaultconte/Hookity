@@ -4,7 +4,7 @@ setup(
     name='hookity',
     author="Thibault Conte",
     author_email="thibault1.conte@epitech.eu",
-    description="Improve branch and commit message authorization for collaborator"
+    description="Improve branch and commit message authorization for collaborator",
     version='0.1',
     packages=find_packages(),
     package_data={'hookity': ['resources/*']},

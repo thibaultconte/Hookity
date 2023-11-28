@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./HOOKS/check_commit_norme.sh || exit 1
+./hookity/check_commit_norme.sh || exit 1
 
 # An example hook script to check the commit log message.
 # Called by "git commit" with one argument, the name of the file

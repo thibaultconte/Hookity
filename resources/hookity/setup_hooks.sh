@@ -1,14 +1,14 @@
 #!/bin/bash
 
-hooks_folder="../.git/hooks"
+hooks_folder=".git/hooks"
 
-cp samples/pre-push "$hooks_folder/"
-cp samples/commit-msg "$hooks_folder/"
+cp hookity/samples/pre-push "$hooks_folder/"
+cp hookity/samples/commit-msg "$hooks_folder/"
 
 chmod +x "$hooks_folder/pre-push"
 chmod +x "$hooks_folder/commit-msg"
 
-chmod +x ./check_branch_norme.sh
-chmod +x ./check_commit_norme.sh
+chmod +x hookity/check_branch_norme.sh
+chmod +x hookity/check_commit_norme.sh
 
-echo -e "\033[1;32mHooks des conventions de branches et commits configurés avec succès.\033[0m"
+echo -e "\033[1;32mLes Hooks de convention de nommage Hookity Git ont été activé avec succés.\033[0m"
