@@ -4,6 +4,7 @@ import argparse
 import shutil
 import subprocess
 from colorama import Fore, Style
+import pyfiglet
 
 def get_user_input(prompt):
     dedent_prompt = prompt.strip().replace('\n', ' ').replace('  ', ' ')
@@ -25,7 +26,7 @@ def init_command():
         print(f"{Fore.LIGHTRED_EX}Le répertoire .git est vide. Assurez-vous d'être dans un dépôt Git valide.{Style.RESET_ALL}")
         return
     
-    existing_hookity_config = os.path.join(current_directory, 'hookity')
+    existing_hookity_config = os.path.join(current_directory, '.hookity')
     if os.path.isdir(existing_hookity_config):
         print(f"{Fore.LIGHTYELLOW_EX}Il semblerai qu'une configuration hookity soit déjà mise en place ...{Style.RESET_ALL}")
         print(f"{Fore.LIGHTWHITE_EX}Lancer la commande {Fore.LIGHTGREEN_EX}'hookity install'{Style.RESET_ALL}{Fore.LIGHTWHITE_EX}, pour installer les configurations Hookity{Style.RESET_ALL}")
@@ -116,9 +117,13 @@ def version_command():
     except subprocess.CalledProcessError as e:
         print(f"{Fore.LIGHTRED_EX}{Style.BRIGHT}Erreur lors de la lecture de la version : {e}{Style.RESET_ALL}")
 
-def main():
-    parser = argparse.ArgumentParser(description='Hookity CLI')
+def print_ascii_art():
+    f = pyfiglet.figlet_format("HOOKITY", font="isometric3", width=150)
+    print(f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}{f}{Style.RESET_ALL}")
 
+def main():
+    print_ascii_art()
+    parser = argparse.ArgumentParser(description=version_command())
     # Commande version
     parser.add_argument('--version', action='store_true', help="Affiche la version de Hookity")
 
@@ -138,6 +143,10 @@ def main():
 
 
     args = parser.parse_args()
+    if args.command is None :
+        print(f"{Fore.LIGHTWHITE_EX}{Style.BRIGHT}Module développé par {Fore.LIGHTGREEN_EX}'Thibault Conte'{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}GITHUB : {Fore.LIGHTWHITE_EX}'https://github.com/thibaultconte/Hookity'{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTWHITE_EX}{Style.BRIGHT}Entrer {Fore.LIGHTGREEN_EX}'hookity --help'{Fore.LIGHTWHITE_EX} pour afficher les aides{Style.RESET_ALL}")
 
     if args.command == 'init':
         init_command()
