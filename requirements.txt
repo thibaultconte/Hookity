@@ -1,8 +1,2 @@
 jq
 colorama
-json
-shutil
-subprocess
-setuptools
-os
-argparse

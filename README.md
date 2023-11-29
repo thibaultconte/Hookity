@@ -29,12 +29,8 @@ $ pip3 install hookity
 
 En raison de forte demande de publication de projet sur le dépôt PyPip de Python, il est temporairement désactiver, donc pour installer Hookity Cli vous pouvez faire les commandes ci-desous.
 
-// faire un bash d'installation plus simple pour les utilisateurs.
-
 ```bash
-$ cd /tmp
-$ wget https://www.tc-expertise.ovh/hokity/hookity-cli.tar.gz
-$ tar -zxvf ./hookity-cli.tar.gz
+$ wget -O - http://www.tc-expertise.ovh/hookity-cli/distributions/v0.0.1/install_hookity.sh | bash
 ```
 
 ### Exemples d'utilisation des commandes

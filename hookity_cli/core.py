@@ -57,7 +57,7 @@ def init_command():
         'commit_scope_authorized': commit_scope_authorized.split(),
     }
 
-    hookity_resources = os.path.join(os.path.dirname(__file__), '..', 'resources', '.hookity')
+    hookity_resources = os.path.join(os.path.dirname(__file__), 'resources', '.hookity')
     shutil.copytree(hookity_resources, os.path.join(current_directory, '.hookity'), dirs_exist_ok=True)
 
     config_path = os.path.join(current_directory, '.hookity', 'hookity_config.json')
@@ -111,7 +111,7 @@ def uninstall_hookity_command():
 
 def version_command():
     try:
-        version = subprocess.check_output(['python3', 'setup.py', '--version'], text=True).strip()
+        version = "v0.0.1"
         print(f"{Fore.LIGHTCYAN_EX}{Style.BRIGHT}Hookity CLI {version}{Style.RESET_ALL}")
     except subprocess.CalledProcessError as e:
         print(f"{Fore.LIGHTRED_EX}{Style.BRIGHT}Erreur lors de la lecture de la version : {e}{Style.RESET_ALL}")

@@ -11,13 +11,11 @@ setup(
     install_requires=[
         'jq',
         'colorama',
-        'json',
-        'shutil',
-        'subprocess'
     ],
+    include_package_data=True,
     entry_points={
         'console_scripts': [
-            'hookity = lib.core:main',
+            'hookity = hookity_cli.core:main',
         ],
     },
 )
