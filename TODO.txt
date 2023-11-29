@@ -1,9 +1,9 @@
 - Vérifier les message d'information en cas de mauvais commit ou branches
-- Mettre le dossier hookity en dossier caché (.hookity)
-- Mettre en place le script de désinstallation (Le lead tech veut désinstaller toutes les configs de hookity). (uninstall command)
-- Mettre en place le script de désactivation (Un collaborateur souhaite désactiver hookity vérification). (deactivate command)
-- Modifier l'action commande Install -> activate (activate command)
-- Optimiser l'interface d'initialisation de hookity
+- Mettre le dossier hookity en dossier caché (.hookity) FAIT
+- Mettre en place le script de désinstallation (Le lead tech veut désinstaller toutes les configs de hookity). (uninstall command) FAIT
+- Mettre en place le script de désactivation (Un collaborateur souhaite désactiver hookity vérification). (deactivate command) FAIT
+- Modifier l'action commande Install -> activate (activate command) FAIT
+- Optimiser l'interface d'initialisation de hookity FAIT
 - Commenter le code
 - Refaire des test de vérification
 - Tester depuis un nouveau repo indépendant
