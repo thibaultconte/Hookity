@@ -133,7 +133,7 @@ def main():
     subparsers.add_parser('init', help='Initialisation et configuration de Hookity dans votre projet git.')
 
     # Activate command
-    subparsers.add_parser('activate', help='Désactiver les configurations Hookity Git dans votre repository (Local).')
+    subparsers.add_parser('activate', help='Activer les configurations Hookity Git dans votre repository (Local).')
 
     # Deactivate command
     subparsers.add_parser('deactivate', help='Désactiver les configurations Hookity Git dans votre repository (Local).')
