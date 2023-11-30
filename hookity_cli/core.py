@@ -130,21 +130,21 @@ def main():
     subparsers = parser.add_subparsers(title="Liste des commandes autorisées",help='Commandes disponibles', dest='command')
 
     # Init command
-    subparsers.add_parser('init', help='Initialisation et configuration de Hookity dans votre projet git.')
+    subparsers.add_parser('init', help='Initialiser et configurer Hookity dans votre dépôt git.')
 
     # Activate command
-    subparsers.add_parser('activate', help='Désactiver les configurations Hookity Git dans votre repository (Local).')
+    subparsers.add_parser('activate', help='Activer les configurations Hookity dans votre dépôt git.')
 
     # Deactivate command
-    subparsers.add_parser('deactivate', help='Désactiver les configurations Hookity Git dans votre repository (Local).')
+    subparsers.add_parser('deactivate', help='Désactiver les configurations Hookity dans votre dépôt git.')
 
     # Uninstall command
-    subparsers.add_parser('uninstall', help='Désinstaller et désinitialiser toutes les configurations Hookity Git dans votre repository (HARD).')
+    subparsers.add_parser('uninstall', help='Désinstaller et désinitialiser toutes les configurations Hookity dans votre dépôt git. (ATTENTION)')
 
 
     args = parser.parse_args()
     if args.command is None :
-        print(f"{Fore.LIGHTWHITE_EX}{Style.BRIGHT}Module développé par {Fore.LIGHTGREEN_EX}'Thibault Conte'{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTWHITE_EX}{Style.BRIGHT}CLI développé par {Fore.LIGHTGREEN_EX}'Thibault Conte'{Style.RESET_ALL}")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}GITHUB : {Fore.LIGHTWHITE_EX}'https://github.com/thibaultconte/Hookity'{Style.RESET_ALL}")
         print(f"{Fore.LIGHTWHITE_EX}{Style.BRIGHT}Entrer {Fore.LIGHTGREEN_EX}'hookity --help'{Fore.LIGHTWHITE_EX} pour afficher les aides{Style.RESET_ALL}")
 
